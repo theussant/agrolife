@@ -3,7 +3,7 @@ import 'package:agrolife/pages/mobile/notifications.dart';
 import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:agrolife/utils/style.dart';
-import 'package:agrolife/utils/teste2.dart';
+import 'package:agrolife/utils/app_bar_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
