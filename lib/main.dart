@@ -1,4 +1,5 @@
 import 'package:agrolife/pages/mobile/bottom_bar.dart';
+import 'package:agrolife/pages/mobile/page_plantation.dart';
 import 'package:agrolife/utils/style.dart';
 import 'package:flutter/material.dart';
 
@@ -15,12 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: primary,
-        textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: Colors.black
-        ),
+        textSelectionTheme:
+            const TextSelectionThemeData(cursorColor: Colors.black),
       ),
-      home: const BottomBar(),
+      home: const PagePlantation(),
     );
   }
 }
-
