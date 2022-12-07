@@ -1,5 +1,8 @@
+import 'package:agrolife/pages/mobile/edit_profile.dart';
 import 'package:agrolife/pages/mobile/home_page.dart';
 import 'package:agrolife/pages/mobile/notifications.dart';
+import 'package:agrolife/pages/mobile/profile.dart';
+import 'package:agrolife/pages/mobile/settings.dart';
 import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:agrolife/utils/style.dart';
@@ -195,6 +198,21 @@ class _BottomBarState extends State<BottomBar> {
 
               onTap: () {
                 Navigator.pop(context);
+
+                Future.delayed(const Duration(milliseconds: 500), () {
+                  Navigator.pushReplacement(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context){
+                      return ResponsiveLayout(
+                        mobileScaffold: const PageSettings(),
+                        tabletScaffold: const TabletScaffold(),
+                      );
+                    }
+                  )
+                );
+                });
+
               },
               
             ),
@@ -216,6 +234,21 @@ class _BottomBarState extends State<BottomBar> {
 
               onTap: () {
                 Navigator.pop(context);
+
+                Future.delayed(const Duration(milliseconds: 500), () {
+                  Navigator.pushReplacement(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context){
+                      return ResponsiveLayout(
+                        mobileScaffold: const PageEditProfile(),
+                        tabletScaffold: const TabletScaffold(),
+                      );
+                    }
+                  )
+                );
+                });
+
               },
               
             ),

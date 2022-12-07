@@ -3,14 +3,15 @@ import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:flutter/material.dart';
 
-class PageEditProfile extends StatefulWidget {
-  const PageEditProfile({Key? key}) : super(key: key);
+
+class PageProfile extends StatefulWidget {
+  const PageProfile({Key? key}) : super(key: key);
 
   @override
-  _PageEditProfile createState() => _PageEditProfile();
+  _PageProfile createState() => _PageProfile();
 }
 
-class _PageEditProfile extends State<PageEditProfile> {
+class _PageProfile extends State<PageProfile> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -59,11 +60,11 @@ class _PageEditProfile extends State<PageEditProfile> {
                         clipBehavior: Clip.none,
                         children: [
                           Positioned(
-                            left: 10,
+                            left: 7,
                             top: 35,
                             child: SizedBox(
-                              width: 40,
-                              height: 40,
+                              width: 30,
+                              height: 30,
                               child: InkWell(
                                 onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(
                                   builder: (context){
@@ -100,7 +101,7 @@ class _PageEditProfile extends State<PageEditProfile> {
                         ),
                         onPressed: () {},
                         child: Text(
-                          "Atualizar",
+                          "Código QR",
                           overflow: TextOverflow.visible,
                           style:
                               Theme.of(context).textTheme.headline1!.copyWith(
@@ -178,7 +179,8 @@ class _PageEditProfile extends State<PageEditProfile> {
                                   clipBehavior: Clip.none,
                                   children: [
                                     Positioned(
-                                      right: 157,
+                                      //left: 1,
+                                      right: 40,
                                       top: 2,
                                       child: Container(
                                         width: 15,
@@ -192,7 +194,7 @@ class _PageEditProfile extends State<PageEditProfile> {
                                             clipBehavior: Clip.none,
                                             children: [
                                               Positioned(
-                                                left: 0,
+                                                left: -119,
                                                 top: 12,
                                                 child: SizedBox(
                                                   width: 15,
@@ -202,7 +204,7 @@ class _PageEditProfile extends State<PageEditProfile> {
                                                 ),
                                               ),
                                               Positioned(
-                                                left: 2,
+                                                left: -117,
                                                 top: 0,
                                                 child: SizedBox(
                                                   width: 10,
@@ -461,6 +463,16 @@ class _PageEditProfile extends State<PageEditProfile> {
                 ),
               ]),
             ),
+            // Positioned(
+            //   left: 0,
+            //   top: 904,
+            //   child: SizedBox(
+            //     width: 368,
+            //     height: 975,
+            //     child:
+            //         Image.asset("lib/images/Orderoptions_ImageView_40-368x975.png"),
+            //   ),
+            // ),
           ],
         ),
       ),
