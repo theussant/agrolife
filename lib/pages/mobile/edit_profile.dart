@@ -42,7 +42,7 @@ class _PageEditProfile extends State<PageEditProfile> {
                     child: Stack(
                         alignment: Alignment.center,
                         clipBehavior: Clip.none,
-                        children: []),
+                        children: const []),
                   ),
                 ),
                 Positioned(
@@ -76,16 +76,6 @@ class _PageEditProfile extends State<PageEditProfile> {
                       width: 343,
                       height: 48,
                       child: TextButton(
-                        child: Text(
-                          "Código QR",
-                          overflow: TextOverflow.visible,
-                          style:
-                              Theme.of(context).textTheme.headline1!.copyWith(
-                                    fontSize: 16,
-                                    backgroundColor: const Color(0xff429058),
-                                    color: Colors.white,
-                                  ),
-                        ),
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.zero,
                           backgroundColor: const Color(0xff429058),
@@ -98,6 +88,16 @@ class _PageEditProfile extends State<PageEditProfile> {
                           ),
                         ),
                         onPressed: () {},
+                        child: Text(
+                          "Código QR",
+                          overflow: TextOverflow.visible,
+                          style:
+                              Theme.of(context).textTheme.headline1!.copyWith(
+                                    fontSize: 16,
+                                    backgroundColor: const Color(0xff429058),
+                                    color: Colors.white,
+                                  ),
+                        ),
                       ),
                     )),
                 Positioned(
