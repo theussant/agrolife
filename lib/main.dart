@@ -1,3 +1,4 @@
+import 'package:agrolife/pages/mobile/page_inventory_add.dart';
 import 'package:agrolife/pages/splash_screen.dart';
 import 'package:agrolife/utils/style.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           cursorColor: Colors.black
         ),
       ),
-      home: const SplashScreen(),
+      home: const PageInventoryAdd(),
     );
   }
 }
