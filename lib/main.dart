@@ -1,4 +1,5 @@
 import 'package:agrolife/pages/mobile/bottom_bar.dart';
+import 'package:agrolife/pages/splash_screen.dart';
 import 'package:agrolife/pages/mobile/page_plantation.dart';
 import 'package:agrolife/utils/style.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         textSelectionTheme:
             const TextSelectionThemeData(cursorColor: Colors.black),
       ),
-      home: const PagePlantation(),
+      home: const SplashScreen(),
     );
   }
 }
