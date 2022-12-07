@@ -1,4 +1,5 @@
 import 'package:agrolife/pages/mobile/bottom_bar.dart';
+import 'package:agrolife/pages/mobile/page_inventory_add.dart';
 import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
 import 'package:agrolife/utils/card_inventory.dart';
@@ -119,16 +120,8 @@ class _PageInventoryState extends State<PageInventory> {
             ),
           ),
 
-          /*CardInventory(
-            imgPathProduct: listCardsInventory[index][0], 
-            nameProduct: listCardsInventory[index][1], 
-            qtdProduct: listCardsInventory[index][2]
-          ),*/
-
-
           SizedBox(
             height: altura * 0.8,
-            //width: 100,
             child: GridView.builder(
               itemCount: listCardsInventory.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
@@ -144,7 +137,49 @@ class _PageInventoryState extends State<PageInventory> {
           )
 
         ],
-      )
+      ),
+
+      /*floatingActionButton: SpeedDial(
+
+        icon: Icons.add,
+        activeIcon: Icons.close,
+        backgroundColor: Style.primaryColor,
+        //animatedIcon: AnimatedIcons.arrow_menu,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.4,
+        spacing: 12,
+       
+        children: [
+
+          SpeedDialChild(
+            child: const Icon(Icons.inventory),
+            label: 'Estoque',
+            
+          ),
+
+          
+        ],
+      ),*/
+      
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() {
+          Navigator.pushReplacement(
+            context, 
+            MaterialPageRoute(
+              builder: (context){
+                return ResponsiveLayout(
+                  mobileScaffold: const PageInventoryAdd(),
+                  tabletScaffold: const TabletScaffold(),
+                );
+              }
+            )
+          );
+        }),
+
+        backgroundColor: Style.primaryColor,
+        child: const Icon(Icons.add),
+        
+      ),
       
     );
   }

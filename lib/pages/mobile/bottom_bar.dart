@@ -366,6 +366,7 @@ class _BottomBarState extends State<BottomBar> {
 
       body: navigationPages.elementAt(_searchIndex),
 
+    
       bottomNavigationBar: BottomNavigationBar(
 
         selectedItemColor: Colors.black,
@@ -374,9 +375,9 @@ class _BottomBarState extends State<BottomBar> {
         elevation: 10,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        //type: BottomNavigationBarType.fixed,
-        onTap: _onItemTapped,
+        type: BottomNavigationBarType.fixed,
 
+        onTap: _onItemTapped,
         
         items: const [
 
