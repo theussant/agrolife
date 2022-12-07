@@ -1,8 +1,4 @@
-import 'package:agrolife/pages/mobile/bottom_bar.dart';
-import 'package:agrolife/pages/splash_screen.dart';
-import 'package:agrolife/pages/mobile/page_plantation.dart';
-import 'package:agrolife/utils/style.dart';
-import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
