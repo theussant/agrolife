@@ -1,3 +1,8 @@
+import 'package:agrolife/pages/mobile/page_animal.dart';
+import 'package:agrolife/pages/mobile/page_inventory.dart';
+import 'package:agrolife/pages/mobile/page_plantation.dart';
+import 'package:agrolife/pages/mobile/page_sell.dart';
+import 'package:agrolife/pages/mobile/page_shop.dart';
 import 'package:agrolife/utils/card_home_page.dart';
 import 'package:agrolife/utils/scroll.dart';
 import 'package:agrolife/utils/style.dart';
@@ -17,11 +22,11 @@ class _HomePageState extends State<HomePage> {
   final ScrollController controller = ScrollController();
 
   final List cards = [
-    ['Shop','6 compras','lib/images/icon_compras.png'],
-    ['Vendas','10 vendas','lib/images/icon_venda2.png'],
-    ['Estoque','6 produtos','lib/images/icon_estoque2.png'],
-    ['Plantação','Em monitoramento','lib/images/icon_planta2.png'],
-    ['Animais','Em monitoramento','lib/images/icon_gado2.png'],
+    ['Shop','6 compras','lib/images/icon_compras.png',const PageShop()],
+    ['Vendas','10 vendas','lib/images/icon_venda2.png',const PageSell()],
+    ['Estoque','6 produtos','lib/images/icon_estoque2.png',const PageInventory()],
+    ['Plantação','Em monitoramento','lib/images/icon_planta2.png',const PagePlantation()],
+    ['Animais','Em monitoramento','lib/images/icon_gado2.png',const PageAnimal()],
   ];
 
   @override
@@ -275,6 +280,7 @@ class _HomePageState extends State<HomePage> {
                     titleCard: cards[index][0],
                     subTitleCard: cards[index][1],
                     imagePath: cards[index][2],
+                    navigationCards: cards[index][3],
                   );
                 },
               ),
