@@ -1,6 +1,7 @@
 import 'package:agrolife/pages/mobile/bottom_bar.dart';
 import 'package:agrolife/responsive/responsive_layout.dart';
 import 'package:agrolife/responsive/tablet_scaffold.dart';
+import 'package:agrolife/utils/card_inventory.dart';
 import 'package:agrolife/utils/style.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,8 +15,19 @@ class PageInventory extends StatefulWidget {
 }
 
 class _PageInventoryState extends State<PageInventory> {
+
+  List listCardsInventory = [
+    ['lib/images/img_trigo.png','Semente de Trigo', 35],
+    ['lib/images/img_arroz.png','Semente de Arroz', 35],
+    ['lib/images/img_cafe.png','Semente de Café', 35],
+    ['lib/images/img_batata.png','Broto de Batata', 35],
+    ['lib/images/img_rbovinho.png','Ração para Bovinos', 35],
+    ['lib/images/img_rgalinha.png','Ração de Galinha', 35],
+  ];
+
   @override
   Widget build(BuildContext context) {
+    var altura = MediaQuery.of(context).size.height;
     return Scaffold(
       
       backgroundColor: Colors.grey[300],
@@ -107,17 +119,29 @@ class _PageInventoryState extends State<PageInventory> {
             ),
           ),
 
+          /*CardInventory(
+            imgPathProduct: listCardsInventory[index][0], 
+            nameProduct: listCardsInventory[index][1], 
+            qtdProduct: listCardsInventory[index][2]
+          ),*/
 
-          Container(
-            width: 154,
-            height: 164,
-            child: Column(
-              children: [
-                Image.asset('lib/images/img_trigo.png'),
-              
-              ],
+
+          SizedBox(
+            height: altura * 0.8,
+            //width: 100,
+            child: GridView.builder(
+              itemCount: listCardsInventory.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
+              itemBuilder: ((context, index) {
+                return CardInventory(
+                  imgPathProduct: listCardsInventory[index][0], 
+                  nameProduct: listCardsInventory[index][1], 
+                  qtdProduct: listCardsInventory[index][2]
+                );
+                
+              })
             ),
-          ),
+          )
 
         ],
       )
