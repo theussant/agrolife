@@ -1,4 +1,4 @@
-# AgroLife :ear_of_rice: - Repositório do TCC.
+# AgroLife :ear_of_rice:.
 
 <br>
 
